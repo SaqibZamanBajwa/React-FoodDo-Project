@@ -1,0 +1,105 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  background-color: #deffe1;
+  border-bottom: 1px solid rgb(208, 206, 206);
+  padding: 10px;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+
+.table tr {
+  border-bottom: 1px solid rgb(208, 206, 206);
+  color: rgb(79, 79, 79);
+  max-height: 300px;
+}
+
+.table tr.row {
+  border-bottom: 1px solid rgb(208, 206, 206);
+  color: rgb(79, 79, 79);
+}
+
+.table tr.collapse {
+  overflow: scroll;
+}
+
+.table tr.collapse table {
+  width: 100%;
+  height: 100%;
+}
+
+.table tr.collapse table thead .collapse-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.table tr.collapse > td {
+  display: none;
+}
+
+.table tr.collapse td.active {
+  display: table-cell;
+}
+
+.table td {
+  padding: 10px;
+}
+
+.table td button {
+  padding: 5px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.table tbody {
+  padding: 30px;
+  background-color: white;
+}
+
+.description {
+  width: 100%;
+  resize: horizontal;
+}
+
+.actionButton {
+  background-color: #44cd4a !important;
+  color: white !important;
+  padding: 0.4rem 2rem !important;
+  font-size: medium !important;
+  border-radius: 0.5rem;
+}
+
+.dragIcon {
+  width: 16px;
+  opacity: 0.5;
+}
+
+.dragColumn {
+  width: 4rem;
+}
+
+.titleColumn {
+  width: 24rem;
+}
+
+.statusColumn {
+  width: 8rem;
+}
+
+.actionColumn {
+  width: 8rem;
+}
+
+.mealTitleInput {
+  padding: 0.6rem;
+  font-size: medium;
+  width: 80%;
+}

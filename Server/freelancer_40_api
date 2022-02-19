@@ -1,0 +1,1275 @@
+{
+	"info": {
+		"_postman_id": "9318580f-8bc3-4755-9347-226ab55b1693",
+		"name": "40 APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "brand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "outlet_uuid",
+								"value": "1",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"brand_name\": \"lapinoz\",\r\n        \"brand_uuid\": \"1\",\r\n        \"org_uuid\": \"2\",\r\n        \"category_uuid\": [],\r\n        \"outlet_uuid\": [\r\n            1\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/brand/postbrand",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"postbrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "section",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"section_uuid\": \"2\",\r\n        \"section_name\": \"\",\r\n        \"section_sort_order\": \"123\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/outlet/postSection/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"outlet",
+								"postSection",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"charges_and_discounts\": [\r\n        {\r\n            \"type\": \"charges\",\r\n            \"percent\": \"1\",\r\n            \"amt\": \"1\",\r\n            \"title\": \"1\",\r\n            \"remarks\": \"1\"\r\n        }\r\n    ],\r\n    \"logs\": [],\r\n    \"brand_uuid\": \"4\",\r\n    \"completed_at\": \"Fri Dec 24 2021\",\r\n    \"created_at\": \"Fri Dec 24 2021\",\r\n    \"Timestamp\": \"Fri Dec 24 2021\",\r\n    \"created_by_user_uuid\": \"1\",\r\n    \"customer_mobile\": \"9737324562\",\r\n    \"customer_name\": \"nirav\",\r\n    \"delivery_status\": \"D\",\r\n    \"fin_uuid\": \"1\",\r\n    \"last_updated_at\": \"Fri Dec 24 2021\",\r\n    \"local_order_id\": \"1\",\r\n    \"order_status\": \"P\",\r\n    \"order_total\": \"1\",\r\n    \"order_type\": \"type\",\r\n    \"order_uuid\": \"1\",\r\n    \"outlet_uuid\": \"1\",\r\n    \"payment_at\": \"Fri Dec 24 2021\",\r\n    \"payment_by_user_uuid\": \"1\",\r\n    \"payment_status\": \"paied\",\r\n    \"payment_total\": \"123\",\r\n    \"preparation_status\": \"p\",\r\n    \"seat_uuid\": \"1\",\r\n    \"taxation_type\": \"gst\",\r\n    \"total_tax_cess\": \"12\",\r\n    \"total_tax_gst\": \"21\",\r\n    \"total_tax_vat\": \"12\",\r\n    \"payment_details\": [\r\n        {\r\n            \"payment_mode_uuid\": \"21\",\r\n            \"amount\": \"123\"\r\n        }\r\n    ],\r\n    \"order_kot_details\": [\r\n        {\r\n            \"kot\": \"kot\",\r\n            \"user_uuid\": \"user_uuid\",\r\n            \"creation_date\": \"Fri Dec 24 2021\",\r\n            \"created_at\": \"Fri Dec 24 2021\",\r\n            \"kot_items_details\": [\r\n                {\r\n                    \"item_uuid\": \"1\",\r\n                    \"order_item_status\": \"status\",\r\n                    \"order_item_qty\": \"1\",\r\n                    \"order_item_unit_price\": \"123\",\r\n                    \"order_item_unit_gst\": \"12\",\r\n                    \"order_item_unit_vat\": \"10\",\r\n                    \"order_item_unit_cess\": \"2\",\r\n                    \"order_item_unit_discount\": \"1\",\r\n                    \"addon_details\": [\r\n                        {\r\n                            \"item_uuid\": \"1\",\r\n                            \"price\": \"123\"\r\n                        }\r\n                    ],\r\n                    \"multi_details\": [\r\n                        {\r\n                            \"item_multi_name\": \"man\",\r\n                            \"item_multi_price\": \"321\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order/postorder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"postorder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"last_updated_at\": \"Fri Dec 24 2021\",\r\n        \"maintain_customer_balance\": \"maintain\",\r\n        \"outlet_wise_detais\": [\r\n            {\r\n                \"outlet_uuid\": \"1\",\r\n                \"status\": \"status\"\r\n            }\r\n        ],\r\n        \"payment_mode_name\": \"onliue\",\r\n        \"payment_mode_uuid\": \"1\"\r\n    },\r\n    {\r\n        \"last_updated_at\": \"Fri Dec 24 2021\",\r\n        \"maintain_customer_balance\": \"maintain\",\r\n        \"outlet_wise_detais\": [\r\n            {\r\n                \"outlet_uuid\": \"2\",\r\n                \"status\": \"status\"\r\n            }\r\n        ],\r\n        \"payment_mode_name\": \"onliue\",\r\n        \"payment_mode_uuid\": \"2\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/payment/postPaymentMode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payment",
+								"postPaymentMode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"brand_uuid\": \"1\",\r\n        \"category_name\": \"2\",\r\n        \"category_uuid\": \"3\",\r\n        \"last_updated_at\": \"\",\r\n        \"outlet_uuid\": [\"1\",\"2\"]\r\n    },\r\n    {\r\n        \"brand_uuid\": \"1\",\r\n        \"category_name\": \"2\",\r\n        \"category_uuid\": \"3\",\r\n        \"last_updated_at\": \"\",\r\n        \"outlet_uuid\": [\"1\"]\r\n    },\r\n    {\r\n        \"brand_uuid\": \"1\",\r\n        \"category_name\": \"2\",\r\n        \"category_uuid\": \"3\",\r\n        \"last_updated_at\": \"\",\r\n        \"outlet_uuid\": [\"2\"]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/postitemcategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"postitemcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organization",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"brand_uuid\": [],\r\n        \"org_uuid\": \"1\",\r\n        \"outlet_uuid\": [\r\n            1,\r\n            2\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/organization/postOrganization",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"organization",
+								"postOrganization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "outlet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"brand_uuid\": [],\r\n        \"org_uuid\": \"\",\r\n        \"setup\": [\r\n            {\r\n                \"currency_sign\": \"$\",\r\n                \"decimal_length\": \"5\",\r\n                \"round_off_invoice\": \"0.2\",\r\n                \"outlet_time_zone\": \"in-asia\",\r\n                \"invoice_kot_setup\": [\r\n                    {\r\n                        \"brand_uuid\": \"21\",\r\n                        \"field_values\": {\r\n                            \"brand_invoice_logo\": \"photo url\",\r\n                            \"invoice_heading\": \"brand\",\r\n                            \"invoice_title\": \"bill\",\r\n                            \"invoice_address1\": \"add0-1\",\r\n                            \"invoice_address2\": \"add0-2\",\r\n                            \"invoice_address3\": \"add0-3\",\r\n                            \"invoice_phone\": 9157444555,\r\n                            \"invoice_field1\": \"1\",\r\n                            \"invoice_field2\": \"2\",\r\n                            \"invoice_field3\": \"2\",\r\n                            \"invoice_footnote\": \"thanks\"\r\n                        },\r\n                        \"invoice_dynamic_value_setup\": {\r\n                            \"INDisplay_AddOn\": \"\",\r\n                            \"InDisplay_MultiSer\": \"\",\r\n                            \"InDisplay_Seat\": \"\",\r\n                            \"InDisplay_KOT\": \"\",\r\n                            \"InDisplay_Date\": \"\",\r\n                            \"InDisplay_Time\": \"\",\r\n                            \"InDisplay_SNo\": \"\",\r\n                            \"InDisplay_PayMode\": \"\",\r\n                            \"InDisplay_Cashier\": \"\",\r\n                            \"InDisplay_QtyTotal\": \"\",\r\n                            \"InDisplay_QtyMerge\": \"\",\r\n                            \"InDisplay_OrderBreakTime\": \"\",\r\n                            \"InDisplay_CustName_DineIn\": \"\",\r\n                            \"InDisplay_CustName_TakeAway\": \"\",\r\n                            \"InDisplay_CustName_Delivery\": \"\",\r\n                            \"InDisplay_CustName_Pickup\": \"\",\r\n                            \"InDisplay_CustName_Zomato\": \"\",\r\n                            \"InDisplay_CustName_Swiggy\": \"\",\r\n                            \"InDisplay_CustMob_DineIn\": \"\",\r\n                            \"InDisplay_CustMob_TakeAway\": \"\",\r\n                            \"InDisplay_CustMob_Delivery\": \"\",\r\n                            \"InDisplay_CustMob_Pickup\": \"\",\r\n                            \"InDisplay_CustMob_Zomato\": \"\",\r\n                            \"InDisplay_CustMob_Swiggy\": \"\",\r\n                            \"InDisplay_CustAdd_Dine\": \"\",\r\n                            \"InDisplay_CustAdd_TakeAway\": \"\",\r\n                            \"InDisplay_CustAdd_Delivery\": \"\",\r\n                            \"InDisplay_CustAdd_Pickup\": \"\",\r\n                            \"InDisplay_CustAdd_Zomato\": \"\",\r\n                            \"InDisplay_CustAdd_Swiggy\": \"\"\r\n                        },\r\n                        \"kot_dynamic_value_setup\": {}\r\n                    }\r\n                ]\r\n            }\r\n        ],\r\n        \"customer_category_uuid\": [\r\n            {\r\n                \"category_uuid\": \"\",\r\n                \"category_title\": \"\"\r\n            }\r\n        ],\r\n        \"customer_link\": [\r\n            {\r\n                \"dine_in\": \"\",\r\n                \"button_status\": \"On/Off\"\r\n            }\r\n        ],\r\n        \"financial_year\": [\r\n            {\r\n                \"fin_uuid\": \"\",\r\n                \"fin_name\": \"\",\r\n                \"created_on\": \"\",\r\n                \"fin_start_date\": \"\",\r\n                \"fin_end_date\": \"\",\r\n                \"seat_uuid\": [],\r\n                \"item_uuid\": [],\r\n                \"menu_uuid\": []\r\n            }\r\n        ],\r\n        \"invoice_series\": [\r\n            {\r\n                \"series\": \"\",\r\n                \"user_uuid\": \"\",\r\n                \"last_used_at\": \"Fri Dec 24 2021\",\r\n                \"next_number\": \"\",\r\n                \"kot_start\": \"\",\r\n                \"kot_end\": \"\"\r\n            }\r\n        ],\r\n        \"outlet_details\": {\r\n            \"outlet_name\": \"\",\r\n            \"outlet_mobile\": \"\",\r\n            \"outlet_email\": \"\",\r\n            \"outlet_address\": {\r\n                \"outlet_area_pin\": \"\",\r\n                \"outlet_town\": \"\",\r\n                \"outlet_district\": \"\",\r\n                \"outlet_state\": \"\",\r\n                \"outlet_country\": \"\"\r\n            }\r\n        },\r\n    \"outlet_merchant_id\": \"\",\r\n    \"outlet_uuid\":\"1\" ,\r\n    \"section_details\": [\r\n        {\r\n            \"section_uuid\": \"\",\r\n            \"section_name\": \"\",\r\n            \"section_sort_order\": \"123\"\r\n        }\r\n    ]\r\n}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/outlet/postOutlet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"outlet",
+								"postOutlet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"customer_mobile\": \"9157446600\",\r\n        \"outlet_wise_customer_details\": [\r\n            {\r\n                \"outlet_uuid\": \"1\",\r\n                \"customer_other_details\": {\r\n                    \"customer_name\": \"2\",\r\n                    \"customer_address1\": \"add-1\",\r\n                    \"customer_email\": \"something@gmail.com\",\r\n                    \"customer_dob\": \"16-10-1987\",\r\n                    \"customer_anniversary_date\": \"15-11-2012\",\r\n                    \"customer_visits\": \"2\",\r\n                    \"customer_category_uuid\": \"2\",\r\n                    \"customer_discount\": \"12\",\r\n                    \"customer_payment_details\": [\r\n                        {\r\n                            \"paymode_uuid\": \"2\",\r\n                            \"customer_balance\": \"1100\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"customer_mobile\": \"7801842472\",\r\n        \"outlet_wise_customer_details\": [\r\n            {\r\n                \"outlet_uuid\": \"2\",\r\n                \"customer_other_details\": {\r\n                    \"customer_name\": \"2\",\r\n                    \"customer_address1\": \"add-1\",\r\n                    \"customer_email\": \"something@gmail.com\",\r\n                    \"customer_dob\": \"16-10-1987\",\r\n                    \"customer_anniversary_date\": \"15-11-2012\",\r\n                    \"customer_visits\": \"2\",\r\n                    \"customer_category_uuid\": \"2\",\r\n                    \"customer_discount\": \"12\",\r\n                    \"customer_payment_details\": [\r\n                        {\r\n                            \"paymode_uuid\": \"2\",\r\n                            \"customer_balance\": \"1100\"\r\n                        }\r\n                    ]\r\n                }\r\n            },\r\n            {\r\n                \"outlet_uuid\": \"3\",\r\n                \"customer_other_details\": {\r\n                    \"customer_name\": \"2\",\r\n                    \"customer_address1\": \"add-1\",\r\n                    \"customer_email\": \"something@gmail.com\",\r\n                    \"customer_dob\": \"16-10-1987\",\r\n                    \"customer_anniversary_date\": \"15-11-2012\",\r\n                    \"customer_visits\": \"2\",\r\n                    \"customer_category_uuid\": \"2\",\r\n                    \"customer_discount\": \"12\",\r\n                    \"customer_payment_details\": [\r\n                        {\r\n                            \"paymode_uuid\": \"2\",\r\n                            \"customer_balance\": \"1100\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"customer_mobile\": \"7801842472\",\r\n        \"outlet_wise_customer_details\": [\r\n            {\r\n                \"outlet_uuid\": \"4\",\r\n                \"customer_other_details\": {\r\n                    \"customer_name\": \"2\",\r\n                    \"customer_address1\": \"add-1\",\r\n                    \"customer_email\": \"something@gmail.com\",\r\n                    \"customer_dob\": \"16-10-1987\",\r\n                    \"customer_anniversary_date\": \"15-11-2012\",\r\n                    \"customer_visits\": \"2\",\r\n                    \"customer_category_uuid\": \"2\",\r\n                    \"customer_discount\": \"12\",\r\n                    \"customer_payment_details\": [\r\n                        {\r\n                            \"paymode_uuid\": \"2\",\r\n                            \"customer_balance\": \"1100\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer/postCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"postCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"last_updated_at\": \"Fri Dec 24 2021\",\r\n    \"outlet_uuid\": \"1\",\r\n    \"brand_uuid\": \"\",\r\n    \"category_and_items\": [\r\n        {\r\n            \"category_uuid\": \"\",\r\n            \"menu_category_sort_order\": \"\",\r\n            \"menu_items\": [\r\n                {\r\n                    \"item_uuid\": \"\",\r\n                    \"menu_item_uuid\": \"123\",\r\n                    \"menu_item_description\": \"\",\r\n                    \"Menu_Item_ParcelCharge\": \"\",\r\n                    \"Menu_Item_ParcelTax\": \"\",\r\n                    \"Menu_Item_Status\": \"\",\r\n                    \"Menu_Item_Price\": \"\",\r\n                    \"Menu_Item_Discount\": \"\",\r\n                    \"Menu_Item_Recommended\": \"\",\r\n                    \"Menu_Item_SortOrder\": \"\",\r\n                    \"Menu_Item_Label\": \"\",\r\n                    \"AddOnSet1\": {\r\n                        \"AddOn_Title\": \"\",\r\n                        \"AddOn_Min\": \"\",\r\n                        \"AddOn_Max\": \"\",\r\n                        \"Item1Details\": {\r\n                            \"Item_UUID\": \"\",\r\n                            \"Price\": \"\"\r\n                        },\r\n                        \"Item2Details\": {\r\n                            \"Item_UUID\": \"\",\r\n                            \"Price\": \"\"\r\n                        }\r\n                    },\r\n                    \"AddOnSet2\": {\r\n                        \"AddOn_Title\": \"\",\r\n                        \"AddOn_Min\": \"\",\r\n                        \"AddOn_Max\": \"\",\r\n                        \"Item1Details\": {\r\n                            \"Item_UUID\": \"\",\r\n                            \"Price\": \"\"\r\n                        },\r\n                        \"Item2Details\": {\r\n                            \"Item_UUID\": \"\",\r\n                            \"Price\": \"\"\r\n                        }\r\n                    },\r\n                    \"Multi\": [\r\n                        {\r\n                            \"Multi_Title\": \"\",\r\n                            \"Multi1\": {\r\n                                \"Item_MultiName\": \"\",\r\n                                \"Item_MultiPrice\": \"\"\r\n                            },\r\n                            \"Multi2\": {\r\n                                \"Item_MultiName\": \"\",\r\n                                \"Item_MultiPrice\": \"\"\r\n                            }\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"menu_for\": [],\r\n    \"menu_title\": \"\",\r\n    \"menu_type\": \"\",\r\n    \"menu_uuid\": \"\"\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/menu/postMenu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"menu",
+								"postMenu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"brand_uuid\": \"1\",\r\n        \"category_uuid\": \"12\",\r\n        \"item_mode\": \"C\",\r\n        \"item_name\": \"pizza\",\r\n        \"item_uuid\": \"4\",\r\n        \"last_updated_at\": \"Fri Dec 24 2021\",\r\n        \"outlet_wise_item_details\": [\r\n            {\r\n                \"outlet_uuid\": \"1\",\r\n                \"inventory_details\": {\r\n                    \"is_saleable\": \"yes\",\r\n                    \"sales_unit\": \"3\",\r\n                    \"primary_unit_name\": \"primary\",\r\n                    \"inventory_reduction_at\": \"sales/projection\",\r\n                    \"ingredients\": [\r\n                        {\r\n                            \"item_uuid\": \"1\",\r\n                            \"qty\": \"3\",\r\n                            \"unit\": \"1\"\r\n                        }\r\n                    ],\r\n                    \"units\": [\r\n                        {\r\n                            \"unit_name\": \"2\",\r\n                            \"unit_numerator\": \"3\",\r\n                            \"unit_denominator\": \"4\",\r\n                            \"unit_status\": \"3\"\r\n                        }\r\n                    ]\r\n                },\r\n                \"warehouse_inventory\": [\r\n                    {\r\n                        \"warehouse_uuid\": \"4\",\r\n                        \"inventory\": \"5\"\r\n                    }\r\n                ],\r\n                \"other_details\": {\r\n                    \"availability_last_updated_at\": \"Fri Dec 24 2021 17:27:14 GMT+0530 (India Standard Time)\",\r\n                    \"item_availability\": \"yes\",\r\n                    \"item_code\": \"2\",\r\n                    \"item_kot_name\": \"kot\",\r\n                    \"item_gst\": \"10\",\r\n                    \"item_vat\": \"10\",\r\n                    \"item_cess\": \"10\",\r\n                    \"item_status\": \"preparing\",\r\n                    \"item_excluded_from_discount\": \"5\",\r\n                    \"item_excluded_from_charge\": \"2\",\r\n                    \"item_parcel_type\": \"10\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/item/postItem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"item",
+								"postItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "seat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"last_updated_at\": \"\",\r\n        \"outlet_uuid\":\"1\",\r\n        \"section_uuid\":\"1\",\r\n        \"seat_uuid\": \"1\",\r\n        \"seat_name\": \"\",\r\n        \"seat_sort_order\": \"\",\r\n        \"seat_status\": \"\",\r\n        \"menu_details\": [\r\n            {\r\n                \"menu_uuid\": \"\",\r\n                \"brand_uuid\": \"\"\r\n            }\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/seat/postSeat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"seat",
+								"postSeat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"accepting_payment_allowed\": \"online\",\r\n        \"outlet_uuid\": \"1\",\r\n        \"user_email\": \"something@gmail.com\",\r\n        \"user_mid\": \"1\",\r\n        \"user_name\": \"nirav\",\r\n        \"user_password\": \"123456\",\r\n        \"user_status\": \"offline\",\r\n        \"user_title\": \"piza lover\",\r\n        \"user_type\": \"customer\",\r\n        \"user_uuid\": \"1\",\r\n        \"usmer_mobile_number\": \"9157446600\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/postUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"postUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "put",
+			"item": [
+				{
+					"name": "brand",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"brand_name\": \"pizaaa\",\r\n        \"brand_uuid\": \"1\",\r\n        \"org_uuid\": \"1\",\r\n        \"category_uuid\": [],\r\n        \"outlet_uuid\": []\r\n    },\r\n    {\r\n        \"brand_name\": \"domminose\",\r\n        \"brand_uuid\": \"2\",\r\n        \"org_uuid\": \"2\",\r\n        \"category_uuid\": [],\r\n        \"outlet_uuid\": []\r\n    },\r\n    {\r\n        \"brand_name\": \" hut\",\r\n        \"brand_uuid\": \"3\",\r\n        \"org_uuid\": \"3\",\r\n        \"category_uuid\": [],\r\n        \"outlet_uuid\": []\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/brand/putbrand",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"putbrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"charges_and_discounts\": [\r\n            {\r\n                \"type\": \"changed\",\r\n                \"percent\": \"1\",\r\n                \"amt\": \"1\",\r\n                \"title\": \"1\",\r\n                \"remarks\": \"1\"\r\n            }\r\n        ],\r\n        \"logs\": [],\r\n        \"brand_uuid\": \"1\",\r\n        \"completed_at\": \"Fri Dec 24 2021 17:27:14 GMT+0530 (India Standard Time)\",\r\n        \"created_at\": \"Fri Dec 24 2021 17:27:14 GMT+0530 (India Standard Time)\",\r\n        \"Timestamp\": \"Fri Dec 24 2021 17:27:14 GMT+0530 (India Standard Time)\",\r\n        \"created_by_user_uuid\": \"1\",\r\n        \"customer_mobile\": \"9157446600\",\r\n        \"customer_name\": \"krish\",\r\n        \"delivery_status\": \"D\",\r\n        \"fin_uuid\": \"1\",\r\n        \"last_updated_at\": \"Fri Dec 24 2021 17:27:14 GMT+0530 (India Standard Time)\",\r\n        \"local_order_id\": \"1\",\r\n        \"order_status\": \"P\",\r\n        \"order_total\": \"1\",\r\n        \"order_type\": \"type\",\r\n        \"order_uuid\": \"1\",\r\n        \"outlet_uuid\": \"1\",\r\n        \"payment_at\": \"Fri Dec 24 2021 17:27:14 GMT+0530 (India Standard Time)\",\r\n        \"payment_by_user_uuid\": \"1\",\r\n        \"payment_status\": \"paied\",\r\n        \"payment_total\": \"123\",\r\n        \"preparation_status\": \"p\",\r\n        \"seat_uuid\": \"1\",\r\n        \"taxation_type\": \"gst\",\r\n        \"total_tax_cess\": \"12\",\r\n        \"total_tax_gst\": \"21\",\r\n        \"total_tax_vat\": \"12\",\r\n        \"payment_details\": [\r\n            {\r\n                \"payment_mode_uuid\": \"21\",\r\n                \"amount\": \"123\"\r\n            }\r\n        ],\r\n        \"order_kot_details\": [\r\n            {\r\n                \"kot\": \"kot\",\r\n                \"user_uuid\": \"user_uuid\",\r\n                \"creation_date\": \"Fri Dec 24 2021 17:27:14 GMT+0530 (India Standard Time)\",\r\n                \"created_at\": \"Fri Dec 24 2021 17:27:14 GMT+0530 (India Standard Time)\",\r\n                \"kot_items_details\": [\r\n                    {\r\n                        \"item_uuid\": \"1\",\r\n                        \"order_item_status\": \"status\",\r\n                        \"order_item_qty\": \"1\",\r\n                        \"order_item_unit_price\": \"123\",\r\n                        \"order_item_unit_gst\": \"12\",\r\n                        \"order_item_unit_vat\": \"10\",\r\n                        \"order_item_unit_cess\": \"2\",\r\n                        \"order_item_unit_discount\": \"1\",\r\n                        \"addon_details\": [\r\n                            {\r\n                                \"item_uuid\": \"1\",\r\n                                \"price\": \"123\"\r\n                            }\r\n                        ],\r\n                        \"multi_details\": [\r\n                            {\r\n                                \"item_multi_name\": \"man\",\r\n                                \"item_multi_price\": \"321\"\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order/putOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"putOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"accepting_payment_allowed\": \"offline\",\r\n        \"outlet_uuid\": \"1\",\r\n        \"user_email\": \"something@gmail.com\",\r\n        \"user_mid\": \"1\",\r\n        \"user_name\": \"nirav\",\r\n        \"user_password\": \"123456\",\r\n        \"user_status\": \"offline\",\r\n        \"user_title\": \"piza lover\",\r\n        \"user_type\": \"customer\",\r\n        \"user_uuid\": \"1\",\r\n        \"usmer_mobile_number\": \"9157446600\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/putUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"putUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"last_updated_at\": \"Fri Dec 24 2021\",\r\n        \"maintain_customer_balance\": \"Mm\",\r\n        \"outlet_wise_detais\": [\r\n            {\r\n                \"outlet_uuid\": \"1\",\r\n                \"status\": \"offline\"\r\n            }\r\n        ],\r\n        \"payment_mode_name\": \"onliue\",\r\n        \"payment_mode_uuid\": \"2\"\r\n    },\r\n    {\r\n        \"last_updated_at\": \"Fri Dec 24 2021\",\r\n        \"maintain_customer_balance\": \"maintain\",\r\n        \"outlet_wise_detais\": [\r\n            {\r\n                \"outlet_uuid\": \"1\",\r\n                \"status\": \"online\"\r\n            }\r\n        ],\r\n        \"payment_mode_name\": \"offline\",\r\n        \"payment_mode_uuid\": \"1\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/payment/putPaymentMode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payment",
+								"putPaymentMode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"brand_uuid\": \"1\",\r\n        \"category_name\": \"2\",\r\n        \"category_uuid\": \"1\",\r\n        \"last_updated_at\": \"\",\r\n        \"outlet_uuid\": []\r\n    },\r\n    {\r\n        \"brand_uuid\": \"1\",\r\n        \"category_name\": \"2\",\r\n        \"category_uuid\": \"2\",\r\n        \"last_updated_at\": \"\",\r\n        \"outlet_uuid\": []\r\n    },\r\n    {\r\n        \"brand_uuid\": \"1\",\r\n        \"category_name\": \"2\",\r\n        \"category_uuid\": \"3\",\r\n        \"last_updated_at\": \"\",\r\n        \"outlet_uuid\": []\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/putItemCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"putItemCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"brand_uuid\": \"1\",\r\n        \"category_uuid\": \"1\",\r\n        \"item_mode\": \"C\",\r\n        \"item_name\": \"tizza\",\r\n        \"item_uuid\": \"1\",\r\n        \"last_updated_at\": \"Fri Dec 24 2021\",\r\n        \"outlet_wise_item_details\": [\r\n            {\r\n                \"outlet_uuid\": \"2\",\r\n                \"inventory_details\": {\r\n                    \"is_saleable\": \"xxxx\",\r\n                    \"sales_unit\": \"3\",\r\n                    \"primary_unit_name\": \"primary\",\r\n                    \"inventory_reduction_at\": \"sales/projection\",\r\n                    \"ingredients\": [\r\n                        {\r\n                            \"item_uuid\": \"1\",\r\n                            \"qty\": \"3\",\r\n                            \"unit\": \"1\"\r\n                        }\r\n                    ],\r\n                    \"units\": [\r\n                        {\r\n                            \"unit_name\": \"2\",\r\n                            \"unit_numerator\": \"3\",\r\n                            \"unit_denominator\": \"4\",\r\n                            \"unit_status\": \"3\"\r\n                        }\r\n                    ]\r\n                },\r\n                \"warehouse_inventory\": [\r\n                    {\r\n                        \"warehouse_uuid\": \"4\",\r\n                        \"inventory\": \"5\"\r\n                    }\r\n                ],\r\n                \"other_details\": {\r\n                    \"availability_last_updated_at\": \"Fri Dec 24 2021\",\r\n                    \"item_availability\": \"yes\",\r\n                    \"item_code\": \"2\",\r\n                    \"item_kot_name\": \"kot\",\r\n                    \"item_gst\": \"10\",\r\n                    \"item_vat\": \"10\",\r\n                    \"item_cess\": \"10\",\r\n                    \"item_status\": \"preparing\",\r\n                    \"item_excluded_from_discount\": \"5\",\r\n                    \"item_excluded_from_charge\": \"2\",\r\n                    \"item_parcel_type\": \"10\"\r\n                }\r\n            }\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/item/putItem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"item",
+								"putItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"customer_mobile\": \"9876543210\",\r\n        \"outlet_wise_customer_details\": [\r\n            {\r\n                \"outlet_uuid\": \"1\",\r\n                \"customer_other_details\": {\r\n                    \"customer_name\": \"2\",\r\n                    \"customer_address1\": \"add-1\",\r\n                    \"customer_email\": \"something@gmail.com\",\r\n                    \"customer_dob\": \"16-10-1987\",\r\n                    \"customer_anniversary_date\": \"15-11-2012\",\r\n                    \"customer_visits\": \"2\",\r\n                    \"customer_category_uuid\": \"2\",\r\n                    \"customer_discount\": \"12\",\r\n                    \"customer_payment_details\": [\r\n                        {\r\n                            \"paymode_uuid\": \"2\",\r\n                            \"customer_balance\": \"1100\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"customer_mobile\": \"9876543210\",\r\n        \"outlet_wise_customer_details\": [\r\n            {\r\n                \"outlet_uuid\": \"1\",\r\n                \"customer_other_details\": {\r\n                    \"customer_name\": \"2\",\r\n                    \"customer_address1\": \"add-1\",\r\n                    \"customer_email\": \"something@gmail.com\",\r\n                    \"customer_dob\": \"16-10-1987\",\r\n                    \"customer_anniversary_date\": \"15-11-2012\",\r\n                    \"customer_visits\": \"2\",\r\n                    \"customer_category_uuid\": \"2\",\r\n                    \"customer_discount\": \"12\",\r\n                    \"customer_payment_details\": [\r\n                        {\r\n                            \"paymode_uuid\": \"2\",\r\n                            \"customer_balance\": \"1100\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer/putCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"putCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organization",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"brand_uuid\": [\"1\"],\r\n    \"org_uuid\": \"1\",\r\n    \"outlet_uuid\": []\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/organization/putOrganization",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"organization",
+								"putOrganization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "menu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"last_updated_at\": \"Fri Dec 24 2021\",\r\n    \"outlet_uuid\": \"updated prove\",\r\n    \"brand_uuid\": \"\",\r\n    \"category_and_items\": [\r\n        {\r\n            \"category_uuid\": \"\",\r\n            \"menu_category_sort_order\": \"\",\r\n            \"menu_items\": [\r\n                {\r\n                    \"item_uuid\": \"\",\r\n                    \"menu_item_uuid\": \"123\",\r\n                    \"menu_item_description\": \"\",\r\n                    \"Menu_Item_ParcelCharge\": \"\",\r\n                    \"Menu_Item_ParcelTax\": \"\",\r\n                    \"Menu_Item_Status\": \"\",\r\n                    \"Menu_Item_Price\": \"\",\r\n                    \"Menu_Item_Discount\": \"\",\r\n                    \"Menu_Item_Recommended\": \"\",\r\n                    \"Menu_Item_SortOrder\": \"\",\r\n                    \"Menu_Item_Label\": \"\",\r\n                    \"AddOnSet1\": {\r\n                        \"AddOn_Title\": \"\",\r\n                        \"AddOn_Min\": \"\",\r\n                        \"AddOn_Max\": \"\",\r\n                        \"Item1Details\": {\r\n                            \"Item_UUID\": \"\",\r\n                            \"Price\": \"\"\r\n                        },\r\n                        \"Item2Details\": {\r\n                            \"Item_UUID\": \"\",\r\n                            \"Price\": \"\"\r\n                        }\r\n                    },\r\n                    \"AddOnSet2\": {\r\n                        \"AddOn_Title\": \"\",\r\n                        \"AddOn_Min\": \"\",\r\n                        \"AddOn_Max\": \"\",\r\n                        \"Item1Details\": {\r\n                            \"Item_UUID\": \"\",\r\n                            \"Price\": \"\"\r\n                        },\r\n                        \"Item2Details\": {\r\n                            \"Item_UUID\": \"\",\r\n                            \"Price\": \"\"\r\n                        }\r\n                    },\r\n                    \"Multi\": [\r\n                        {\r\n                            \"Multi_Title\": \"\",\r\n                            \"Multi1\": {\r\n                                \"Item_MultiName\": \"\",\r\n                                \"Item_MultiPrice\": \"\"\r\n                            },\r\n                            \"Multi2\": {\r\n                                \"Item_MultiName\": \"\",\r\n                                \"Item_MultiPrice\": \"\"\r\n                            }\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"menu_for\": [],\r\n    \"menu_title\": \"\",\r\n    \"menu_type\": \"\",\r\n    \"menu_uuid\": \"\"\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/menu/putMenu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"menu",
+								"putMenu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "section",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"section_uuid\": \"1\",\r\n        \"section_name\": \"get\",\r\n        \"section_sort_order\": \"123\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/outlet/putSection/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"outlet",
+								"putSection",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "seat",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"last_updated_at\": \"yy\",\r\n        \"seat_uuid\": \"1\",\r\n        \"seat_name\": \"\",\r\n        \"seat_sort_order\": \"\",\r\n        \"seat_status\": \"\",\r\n        \"menu_details\": [\r\n            {\r\n                \"menu_uuid\": \"\",\r\n                \"brand_uuid\": \"\"\r\n            }\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/outlet/putSeat/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"outlet",
+								"putSeat",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get",
+			"item": [
+				{
+					"name": "brand",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pcmF2IiwicGFzc3dvcmQiOiIxMjM0NTYiLCJpYXQiOjE2NDEwNDM5MTV9.rZXYiDPYRdB9J5zhgPv8kOuUWMmEKq7VAbPRXqbjI3I",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"brand_uuid\": \"1\"\r\n    },\r\n    {\r\n        \"brand_uuid\": \"2\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/brand/getBrand",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"getBrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "outlet_detail_all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"outlet_uuid\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/outlet/getOutletDetail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"outlet",
+								"getOutletDetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"order_uuid\": \"\"\r\n    },\r\n    {\r\n        \"order_uuid\": \"1\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order/getOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"getOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"category_uuid\": \"1\"\r\n},\r\n{\r\n    \"category_uuid\": \"2\"\r\n},\r\n{\r\n    \"category_uuid\": \"3\"\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/getCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"getCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"payment_mode_uuid\":\"1\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/payment/getPayment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payment",
+								"getPayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"user_uuid\":\"1\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/getUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"getUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "seat",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"seat_uuid\":\"1\"\r\n    },\r\n    {\r\n        \"seat_uuid\":\"\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/outlet/getSeat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"outlet",
+								"getSeat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "menu",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"menu_uuid\":\"1\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/menu/getMenu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"menu",
+								"getMenu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user summry",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"user_uuid\":\"1\"\r\n    },\r\n    {\r\n        \"user_uuid\":\"2\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/getUserSummary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"getUserSummary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"customer_mobile\": \"9157446600\",\r\n        \"outlet_uuid\":\"1\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer/getCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"getCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "section",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"section_uuid\": \"1\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/outlet/getSection",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"outlet",
+								"getSection"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"item_uuid\":\"4\",\r\n        \"outlet_uuid\":\"1\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/item/getItem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"item",
+								"getItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order date wise",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"outlet_uuid\":\"1\",\r\n        \"created_at\": \"Fri dec 24 2021\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order/getOrderDate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"getOrderDate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "deleete",
+			"item": [
+				{
+					"name": "item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"item_uuid\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/item/deleteItem/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"item",
+								"deleteItem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"order_uuid\":\"2\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "menu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"category_uuid\":\"1\",\r\n        \"outlet_uuid\":\"2\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/deleteCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"deleteCategory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"nirav\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pcmF2IiwiaWF0IjoxNjQxMDUyMzQyfQ.9mU0zTi1bdNCHFXJC_JLr7yoHDY6aZANQXGoTNyUNvY",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

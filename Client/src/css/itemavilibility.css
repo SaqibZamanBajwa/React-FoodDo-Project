@@ -1,0 +1,238 @@
+.itemavilablelity {
+  display: flex;
+  width: 95%;
+  position: absolute;
+  top: 2rem;
+  left: 5rem;
+  padding: 1rem;
+}
+.itemavilabelitycontainer {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  width: 100%;
+  align-items: center;
+  overflow-y: hidden;
+}
+.itemavilabelitycontainer > h1 {
+  font-size: 3rem;
+  width: 100%;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  padding-bottom: 0.5rem;
+}
+.avilablecontinaer {
+  grid-gap: 10px;
+  overflow-y: hidden;
+  padding: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.itemavilablelitybox {
+  display: flex;
+  align-items: flex-start;
+  height: 82vh;
+  overflow: hidden;
+  flex-direction: column;
+}
+.searchtable {
+  display: flex;
+  align-items: center;
+}
+.searchtable > label {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+.searchtable > input {
+  border: 1px solid rgb(231, 231, 231);
+  outline: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  margin-right: 0.5rem;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--mainColor);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--mainColor);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.btnsg {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  margin-right: 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2rem;
+  color: #fff;
+  font-size: 1rem;
+}
+.btn.black {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background: #000;
+}
+.btn.red {
+  background: red;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.btn.yellow {
+  background: orange;
+}
+.tablehead {
+  top: 0;
+  position: sticky;
+  z-index: 100;
+  background: #4ac9594d;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  max-height: 72vh;
+  overflow: auto;
+  margin-top: 0.5rem;
+  border: 1px solid rgb(231, 231, 231);
+}
+.tablebody {
+  width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.tablebody > div {
+  border: 1px solid rgb(231, 231, 231);
+  width: 100%;
+  padding: 1rem;
+}
+.col-span-2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.table2 {
+  display: flex;
+  max-height: 72vh;
+  overflow: auto;
+  max-width: 900px;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 1px solid rgb(231, 231, 231);
+}
+.table2elem {
+  width: 1100px;
+  display: flex;
+  flex-direction: column;
+}
+.tbody2item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.xiconbtn {
+  color: #fff;
+  position: absolute;
+  width: 1.5rem;
+  right: 2rem;
+  top: 2.5rem;
+  cursor: pointer;
+}
+.tbody {
+  display: flex;
+  flex-direction: column;
+}
+.tablefooter {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+}
+.tbody2item > div {
+  padding: 1rem;
+  border-right: 2px solid rgb(231, 231, 231);
+  border-bottom: 2px solid rgb(231, 231, 231);
+}
+.savebtn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--mainColor);
+  color: #fff;
+  position: absolute;
+  bottom: 2rem;
+  cursor: pointer;
+  left: 48%;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  float: right;
+}

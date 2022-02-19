@@ -1,0 +1,284 @@
+.paymentdiv {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.329);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.paymentContainer {
+  display: flex;
+  position: relative;
+  width: 85%;
+  height: 83vh;
+  background: #fff;
+  border-radius: 2rem;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.paymentContainer>h1 {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  height: 3.5rem;
+  width: 100%;
+}
+
+.closebtn {
+  cursor: pointer;
+  position: absolute;
+  width: 2rem;
+  right: 1rem;
+  top: 0.5rem;
+  color: #fff;
+}
+
+.paybils {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  padding: 1rem;
+  overflow-y: hidden;
+}
+
+.div6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.paycustomerdetails {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  max-height: 60vh;
+  padding: 1rem;
+}
+
+.paybilamountsOptionsbox {
+  display: grid;
+  grid-template-columns: auto auto;
+  overflow-y: auto;
+  max-height: 45vh;
+}
+
+.paybilamountsOptions>* {
+  cursor: pointer;
+}
+
+.paybilamounts {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  padding: 1rem;
+}
+
+.detailsboxa {
+  display: flex;
+}
+
+.detailsboxa>input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  outline: none;
+  width: 55%;
+  border: 1px solid rgb(187, 187, 187);
+}
+
+.bilReccit {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.recitehead {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid rgb(187, 187, 187);
+}
+
+.recitehead>h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.recitebody {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.paytct {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.recitebody>input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 6rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(187, 187, 187);
+}
+
+.paybilamountstopBtn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.paybilamountstopBtn>button {
+  cursor: pointer;
+  font-size: 1.6rem;
+  background-color: #000;
+  margin-right: 0.5rem;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  width: 9rem;
+  padding: 0.6rem;
+  outline: none;
+  padding-bottom: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  align-items: flex-start;
+}
+
+.bilamnt>span {
+  padding: 0.2rem 0.4rem;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  background-color: var(--mainColor);
+}
+
+.recieved>span {
+  padding: 0.2rem 0.4rem;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  background-color: orange;
+}
+
+.return>span {
+  padding: 0.2rem 0.4rem;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  background-color: rgb(255, 55, 55);
+}
+
+.paybilamountsBottomBtn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  max-height: 50px;
+  overflow: visible;
+}
+
+#payment-total-btnDiv {
+  width: 30vw;
+}
+
+#payment-btnDiv {
+  width: 100%;
+}
+
+.paybilamountsBottomBtn>button, .invoice-container>* {
+  padding: 10px;
+  height: 50px;
+  width: 160px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background: auto;
+}
+
+.invoice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  position: relative;
+  right: calc(160px + .5rem);
+  overflow: hidden;
+  height: 0;
+  bottom: 16px;
+  transition: all .3s ease;
+  z-index: -1;
+}
+
+.invoice-container>*{
+  background-color: var(--mainColor);
+}
+
+.invoice-container.active {
+  z-index: 1;
+  bottom: 235px;
+  height: 300px;
+}
+
+.flexitem {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 45vh;
+}
+
+.greenbtn {
+  background-color: var(--mainColor);
+}
+
+.redbtn {
+  background: rgb(255, 55, 55);
+}
+
+.paybilamountsOptions {
+  display: flex;
+  max-width: 450px;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.paybilamountsOptions>button {
+  padding: 8px;
+  width: 4.5rem;
+  font-size: 0.8rem;
+  height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(150, 150, 150);
+  overflow: hidden;
+}
+
+#payment-btns-container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}

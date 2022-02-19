@@ -1,0 +1,67 @@
+.bulk_upload {
+  text-align: center;
+  display: flex;
+  width: 51%;
+  position: absolute;
+  top: 15rem;
+  left: 25rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 1.5rem;
+  overflow-y: hidden;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 10px 10px black;
+}
+
+.modelTitle {
+  font-size: 3rem;
+  width: 100%;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  padding-bottom: 0.5rem;
+}
+
+.outter-link-button {
+  margin: 12px 12px 12px 12px;
+  cursor: pointer;
+  float: right;
+  padding: 7px 7px 7px 7px;
+  border-radius: 50%;
+  background-color: #d30404;
+}
+
+.inner-link-button {
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.link-button {
+  cursor: pointer;
+  padding: 5px 5px 5px 5px;
+  background-color: transparent;
+  color: #d30404;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  top: 2rem;
+}
+
+.model_header {
+  height: 75px;
+  background: black;
+  color: white;
+}
+
+.modal-content {
+  border: none;
+  padding: 0;
+}
+
+.modal-body {
+  padding: 0;
+}

@@ -1,0 +1,155 @@
+.dailySummary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 1rem;
+}
+.dailySummaryContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background: #fff;
+}
+.dailySummaryContainerHeading {
+  padding: 0.8rem 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+.dailySummaryContainerHeading > h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.dailySummaryContainerBody {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 3.5rem);
+  width: 100%;
+  overflow-y: hidden;
+}
+.dailyQueryForm {
+  border-bottom: 1px solid rgb(230, 230, 230);
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 1rem 0;
+  align-items: center;
+}
+.dailyQueryForm > div {
+  display: flex;
+  flex-direction: column;
+}
+.dailyQueryForm > div > label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+.dailyQueryForm > div > input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 15rem;
+  outline: none;
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.salesTable {
+  display: flex;
+  max-height: 80vh;
+  background: #e6ebef;
+  overflow-x: hidden;
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.summaryTable {
+  display: flex;
+  padding: 0 0.5rem;
+  height: 75vh;
+  overflow-y: hidden;
+  flex-direction: column;
+  background: auto;
+  margin: 0 0.5rem;
+  color: rgb(0, 0, 0);
+  max-width: 650px;
+  min-width: 550px;
+}
+.summaryTableHead {
+  display: grid;
+  align-items: center;
+  border-top-left-radius: 5px;
+  background: var(--mainColor);
+  border-bottom: 0;
+  border-top-right-radius: 5px;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.summaryTable > h1 {
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+}
+.summaryTableHead > h1 {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  padding-right: 0;
+  border-right: 1px solid rgb(218, 218, 218);
+}
+.summaryTableBody {
+  border: 1px solid rgb(177, 177, 177);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  background: #fff;
+  border-top: 0;
+  flex-direction: column;
+  height: calc(100% - 10rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.saledetails {
+  width: 100%;
+  display: grid;
+  border-bottom: 1px solid rgb(218, 218, 218);
+}
+.saledetails > h1 {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 400;
+  border-right: 1px solid rgb(218, 218, 218);
+}
+.summaryTableBodyMain {
+  position: relative;
+}
+.tt {
+  position: sticky;
+  bottom: 0;
+  padding: 1rem;
+  background: #e6ebef;
+  display: flex;
+  justify-content: space-between;
+}
+.tt > h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem;
+}

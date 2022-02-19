@@ -1,0 +1,325 @@
+{
+    "brand_uuid": [],
+    "org_uuid": "org-uuid-1",
+    "setup": {
+        "currency_sign": "Rs",
+        "decimal_length": "2",
+        "outlet_time_zone": ""
+    },
+    "customer_category_uuid": [
+        {
+            "category_uuid": "",
+            "category_title": ""
+        },
+        {
+            "category_uuid": "",
+            "category_title": ""
+        }
+    ],
+    "financial_year": [
+        {
+            "fin_uuid": "",
+            "fin_name": "",
+            "created_on": "",
+            "fin_start_date": "",
+            "fin_end_date": "",
+            "seat_uuid": [],
+            "item_uuid": [],
+            "menu_uuid": []
+        },
+        {
+            "fin_uuid": "",
+            "fin_name": "",
+            "created_on": "",
+            "fin_start_date": "",
+            "fin_end_date": "",
+            "seat_uuid": [],
+            "item_uuid": [],
+            "menu_uuid": []
+        }
+    ],
+    "invoice_series": [
+        {
+            "series": "A",
+            "user_uuid": "jatin",
+            "last_used_at": {
+                "$timestamp": {}
+            },
+            "next_order_number": "106",
+            "kot_start": "1",
+            "kot_end": "500",
+            "next_kot_number": "451"
+        },
+        {
+            "series": "B",
+            "user_uuid": "priyal",
+            "last_used_at": {
+                "$timestamp": {}
+            },
+            "next_order_number": "55",
+            "kot_start": "501",
+            "kot_end": "1000",
+            "next_kot_number": "605"
+        }
+    ],
+    "outlet_details": {
+        "outlet_name": "Dominos",
+        "outlet_mobile": "+91-9156260721",
+        "outlet_email": "priyalramani786@gmail.com",
+        "outlet_logo": "#link",
+        "outlet_address": {
+            "outlet_area_pin": "441601",
+            "outlet_typed_address": "Ganesh Nagar",
+            "outlet_town": "Gondia",
+            "outlet_district": "Gondia",
+            "outlet_state": "Maharashtra",
+            "outlet_country": "India"
+        }
+    },
+    "outlet_merchant_id": "8 digit random number",
+    "outlet_uuid": "outlet-uuid-1",
+    "section_details": [
+        {
+            "section_uuid": "section-uuid-1",
+            "section_name": "Inner Area",
+            "section_sort_order": "1"
+        },
+        {
+            "section_uuid": "section-uuid-2",
+            "section_name": "First Floor",
+            "section_sort_order": "2"
+        },
+        {
+            "section_uuid": "section-uuid-3",
+            "section_name": "Garden Area",
+            "section_sort_order": "3"
+        }
+    ],
+    "cash_denominations": [
+        {
+            "title": "10 Note",
+            "value": "10",
+            "sort_order": ""
+        },
+        {
+            "title": "10 Coin",
+            "value": "10",
+            "sort_order": ""
+        }
+    ],
+    "current_working_day": {
+        "$date": "2001-01-31T18:30:00.000Z"
+    },
+    "customer_link_services": [
+        {
+            "dine_in": "Y",
+            "button_status": "0"
+        },
+        {
+            "delivery": "Y",
+            "button_status": "1"
+        },
+        {
+            "take_away": "Y",
+            "button_status": "1"
+        },
+        {
+            "schedule": "N",
+            "button_status": "0"
+        }
+    ],
+    "kot_type": "2",
+    "invoice_setup": [
+        {
+            "brand_uuid": "",
+            "field_values": {
+                "brand_invoice_logo": "",
+                "invoice_heading": "",
+                "invoice_title": "",
+                "invoice_address": "",
+                "invoice_phone": "",
+                "invoice_blank": "",
+                "invoice_bottomnote": ""
+            },
+            "printer_name": "",
+            "invoice_field_customization": {
+                "seat": "",
+                "ticket_number": "",
+                "order_number": "",
+                "date": "",
+                "time": "",
+                "payment_mode": "",
+                "cashier": "",
+                "customer_name_dinein": "",
+                "customer_name_takeaway": "",
+                "customer_name_delivery": "",
+                "customer_name_zomato": "",
+                "customer_mobile_dinein": "",
+                "customer_mobile_takeaway": "",
+                "customer_mobile_delivery": "",
+                "customer_mobile_zomato": "",
+                "customer_address_dinein": "",
+                "customer_address_takeaway": "",
+                "customer_address_delivery": "",
+                "customer_address_zomato": "",
+                "serial_number_in_items": "",
+                "total_item_quantity": "",
+                "item_display_type": "",
+                "multi_serving_display": ""
+            }
+        },
+        {
+            "brand_uuid": "",
+            "field_values": {
+                "brand_invoice_logo": "",
+                "invoice_heading": "",
+                "invoice_title": "",
+                "invoice_address1": "",
+                "invoice_address2": "",
+                "invoice_address3": "",
+                "invoice_phone1": "",
+                "invoice_phone2": "",
+                "invoice_phone3": "",
+                "invoice_blank1": "",
+                "invoice_blank2": "",
+                "invoice_blank3": "",
+                "invoice_bottomnote1": "",
+                "invoice_bottomnote2": ""
+            },
+            "printer_name": "",
+            "invoice_dynamic_value_setup": {
+                "INDisplay_AddOn": "1/2",
+                "InDisplay_MultiSer": "1/2",
+                "InDisplay_Seat": "Y/N",
+                "InDisplay_KOT": "Y/N",
+                "InDisplay_Date": "Y/N",
+                "InDisplay_Time": "Y/N",
+                "InDisplay_SNo": "Y/N",
+                "InDisplay_PayMode": "Y/N",
+                "InDisplay_Cashier": "Y/N",
+                "InDisplay_QtyTotal": "Y/N",
+                "InDisplay_QtyMerge": "Y/N",
+                "InDisplay_OrderBreakTime": "Y/N",
+                "InDisplay_CustName_DineIn": "Y/N",
+                "InDisplay_CustName_TakeAway": "Y/N",
+                "InDisplay_CustName_Delivery": "Y/N",
+                "InDisplay_CustName_Pickup": "Y/N",
+                "InDisplay_CustName_Zomato": "Y/N",
+                "InDisplay_CustName_Swiggy": "Y/N",
+                "InDisplay_CustMob_DineIn": "Y/N",
+                "InDisplay_CustMob_TakeAway": "Y/N",
+                "InDisplay_CustMob_Delivery": "Y/N",
+                "InDisplay_CustMob_Pickup": "Y/N",
+                "InDisplay_CustMob_Zomato": "Y/N",
+                "InDisplay_CustMob_Swiggy": "Y/N",
+                "InDisplay_CustAdd_Dine": "Y/N",
+                "InDisplay_CustAdd_TakeAway": "Y/N",
+                "InDisplay_CustAdd_Delivery": "Y/N",
+                "InDisplay_CustAdd_Pickup": "Y/N",
+                "InDisplay_CustAdd_Zomato": "Y/N",
+                "InDisplay_CustAdd_Swiggy": "Y/N"
+            }
+        }
+    ],
+    "kot_setup": {
+        "kot_field_customization": {
+            "seat": "",
+            "ticket_number": "",
+            "order_number": "",
+            "date": "",
+            "time": "",
+            "placed_by": "",
+            "category_name_in_items": "",
+            "customer_name_dinein": "",
+            "customer_name_takeaway": "",
+            "customer_name_delivery": "",
+            "customer_name_zomato": "",
+            "customer_mobile_dinein": "",
+            "customer_mobile_takeaway": "",
+            "customer_mobile_delivery": "",
+            "customer_mobile_zomato": "",
+            "customer_address_dinein": "",
+            "customer_address_takeaway": "",
+            "customer_address_delivery": "",
+            "customer_address_zomato": "",
+            "serial_number_in_items": "",
+            "total_item_quantity": "",
+            "item_display_type": "",
+            "multi_serving_display": "",
+            "item_amount": ""
+        },
+        "printer_setup": [
+            {
+                "printer_name": "",
+                "copies": "",
+                "kot_heading": "",
+                "item_group_uuid": ""
+            },
+            {
+                "printer_name": "",
+                "copies": "",
+                "kot_heading": "",
+                "item_group_uuid": ""
+            }
+        ]
+    },
+    "order_integrations": [
+        {
+            "brand_uuid": "",
+            "service_title": "Zomato"
+        },
+        {
+            "brand_uuid": "",
+            "service_title": "Swiggy"
+        }
+    ],
+    "delivery_setup": {
+        "ordering_minimum_bill_amount": "",
+        "ordering_allowance": "0",
+        "delivery_charge_condition": "0",
+        "delivery_charge_bill_amount": "",
+        "dellivery_charges": "",
+        "message_service_available": "",
+        "message_service_unavailable": "",
+        "message_after-order": "",
+        "notification_sms_confirmation": "1",
+        "notification_sms_order_ready": "1",
+        "payment_modes": [
+            "#payment_mode_uuid-1"
+        ],
+        "customer_location": "0"
+    },
+    "pickup_setup": {
+        "message_service_available": "",
+        "message_service_unavailable": "",
+        "message_after-order": "",
+        "notification_sms_confirmation": "1",
+        "notification_sms_order_ready": "1",
+        "payment_modes": [
+            "#payment_mode_uuid-1"
+        ],
+        "customer_location": "0",
+        "minimum_pickup_time": "10"
+    },
+    "meal_scheduling": {
+        "customer_location": "0",
+        "meals": [
+            {
+                "meal_uuid": "meal-1",
+                "meal_title": "Breakfast",
+                "meal_status": "1",
+                "meal_sort_order": "1"
+            },
+            {
+                "meal_uuid": "meal-2",
+                "meal_title": "Lunch",
+                "meal_status": "1",
+                "meal_sort_order": "2"
+            }
+        ]
+    },
+    "customer_links": [
+        "Dominos",
+        "PizzaHut"
+    ]
+}
